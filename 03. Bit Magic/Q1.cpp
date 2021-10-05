@@ -5,16 +5,19 @@ using namespace std;
  // } Driver Code Ends
 class Solution {
   public:
-    int setBits(int N) {
-        int cnt=0;
-        while(N>0){
-            if(N%2==1)cnt++;
-            N=N>>1;
-        }
-        return cnt;
-        
-        // Write Your Code here
+  public static int countSetBits(int n)
+    {
+ 
+        // base case
+        if (n == 0)
+            return 0;
+ 
+        else
+ 
+            // if last bit set add 1 else add 0
+            return (n & 1) + countSetBits(n >> 1);
     }
+ 
 };
 
 // { Driver Code Starts.
